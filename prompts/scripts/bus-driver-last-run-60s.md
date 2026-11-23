@@ -1,6 +1,6 @@
-# 마지막 운행의 10초 — 감동 / 60초 / 실사 (v2 최종본)
+# 마지막 운행의 10초 — 감동 / 60초 / 실사 (v2.1 최종본)
 
-> v2 변경점: ① 컷 14 FPV 드론 제거 → 잔잔한 항공샷 ② 한국 버스·정류장 명시 + 레퍼런스 고정 ③ 키링을 컷 3·9에서 크게 ④ 컷 12 측면 투샷 + 대사는 보이스오버로 ⑤ 회상 속 기사를 현재 기사 레퍼런스로 일관성 확보 ⑥ 한글 간판 깨짐 대응 ⑦ 목소리 2개(내레이터/여자)로 분리하고 컷 길이에 맞게 대사 압축 ⑧ TTS·BGM·효과음 세트 추가
+> v2 변경점: ① 컷 14 FPV 드론 제거 → 잔잔한 항공샷 ② 한국 버스·정류장 명시 + 레퍼런스 고정 ③ 키링을 컷 3·9에서 크게 ④ 컷 12 측면 투샷 + 대사는 보이스오버로 ⑤ 회상 속 기사를 현재 기사 레퍼런스로 일관성 확보 ⑥ 한글 간판 깨짐 대응 ⑦ 목소리 2개(내레이터/여자)로 분리하고 컷 길이에 맞게 대사 압축 ⑧ TTS·BGM·효과음 세트 추가 ⑨ (v2.1) Suno Instrumental·가사 칸 충돌 수정, 볼륨 밸런스 추가
 
 ## 0. 기획 요약
 - 제목 후보: ① 30년 버스 기사가 매일 10초를 기다린 이유 ② 마지막 운행 날, 그 정류장에 그녀가 서 있었다 ③ 기사님, 저 한 번도 안 늦었어요
@@ -165,15 +165,36 @@
 
 - **Title:** The Ten Seconds
 - **Style:** `emotional cinematic instrumental, solo felt piano, slow tempo 68 bpm, nostalgic and warm, Korean drama OST mood, soft strings enter at the middle and swell to a gentle climax near the end, no drums, no vocals`
-- **Instrumental:** ON (가사 없음)
-- **구조 메모(가사 칸에 넣기):**
+- **Exclude Styles:** `vocals, singing, choir, humming, drums`
+
+> ⚠️ Suno에서 **Instrumental을 ON으로 켜면 가사 칸이 사라집니다.** 아래 두 방법 중 하나를 고르세요.
+
+**방법 A: 구조 태그 사용 (추천, 클라이맥스 위치를 조절하기 쉬움)**
+- **Instrumental: OFF**
+- 가사 칸에 **태그만** 넣고 가사는 쓰지 않습니다:
 ```text
-[Intro: soft solo piano, sparse]
-[Verse: piano melody, gentle and nostalgic]
-[Build: low strings slowly join]
-[Climax: full warm strings and piano, emotional swell]
-[Outro: single piano notes fading out]
+[Intro]
+[soft solo piano, sparse]
+
+[Verse]
+[piano melody, gentle and nostalgic]
+
+[Build]
+[low strings slowly join]
+
+[Climax]
+[full warm strings and piano, emotional swell]
+
+[Outro]
+[single piano notes fading out]
+
+[End]
 ```
+- 보컬이 섞여 나오면 Exclude Styles를 확인하고 다시 생성하세요.
+
+**방법 B: 간단하게**
+- **Instrumental: ON**, Style만 입력 (구조는 Suno에 맡김)
+
 - 편집할 때 **Climax가 컷 12~13(0:45~0:55)**에 걸리도록 음악의 시작 위치를 맞추세요.
 
 ---
@@ -189,6 +210,17 @@
 | 9 | 뛰는 발소리, 키링이 짤랑이는 소리 |
 | 11 | 버스 문 "치익" (컷 5와 같은 소리를 써서 수미상관) |
 | 14 | 버스 엔진 소리가 멀어지며 페이드아웃 |
+
+### 볼륨 밸런스 (캡컷 기준, 대략값)
+| 트랙 | 볼륨 |
+|---|---|
+| 🎙 내레이터 / 👩 여자 | 0dB (기준) |
+| BGM | -18dB → **컷 13 대사가 끝난 직후부터 -10dB로 올림** → 컷 14 끝에서 페이드아웃 |
+| 빗소리·바람 등 환경음 | -28dB |
+| 버스 문 "치익", 발소리 등 포인트 효과음 | -14dB 안팎 |
+
+- 숫자보다 **귀로 확인하는 게 우선**이에요. 휴대폰 스피커로 한 번, 이어폰으로 한 번 들어 보고 대사가 묻히지 않는지 보세요.
+- 대사가 나올 때 BGM을 자동으로 살짝 낮추는 캡컷 기능(오디오 더킹)이 있으면 함께 쓰세요.
 
 ## 7. 업로드 세트
 - 제목: **30년 버스 기사가 매일 10초를 기다린 이유**
