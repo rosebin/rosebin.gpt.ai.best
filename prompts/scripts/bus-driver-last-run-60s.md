@@ -1,6 +1,6 @@
-# 마지막 운행의 10초 — 감동 / 60초 / 실사 (v2.1 최종본)
+# 마지막 운행의 10초 — 감동 / 60초 / 실사 (v2.2 최종본)
 
-> v2 변경점: ① 컷 14 FPV 드론 제거 → 잔잔한 항공샷 ② 한국 버스·정류장 명시 + 레퍼런스 고정 ③ 키링을 컷 3·9에서 크게 ④ 컷 12 측면 투샷 + 대사는 보이스오버로 ⑤ 회상 속 기사를 현재 기사 레퍼런스로 일관성 확보 ⑥ 한글 간판 깨짐 대응 ⑦ 목소리 2개(내레이터/여자)로 분리하고 컷 길이에 맞게 대사 압축 ⑧ TTS·BGM·효과음 세트 추가 ⑨ (v2.1) Suno Instrumental·가사 칸 충돌 수정, 볼륨 밸런스 추가
+> v2 변경점: ① 컷 14 FPV 드론 제거 → 잔잔한 항공샷 ② 한국 버스·정류장 명시 + 레퍼런스 고정 ③ 키링을 컷 3·9에서 크게 ④ 컷 12 측면 투샷 + 대사는 보이스오버로 ⑤ 회상 속 기사를 현재 기사 레퍼런스로 일관성 확보 ⑥ 한글 간판 깨짐 대응 ⑦ 목소리 2개(내레이터/여자)로 분리하고 컷 길이에 맞게 대사 압축 ⑧ TTS·BGM·효과음 세트 추가 ⑨ (v2.1) Suno Instrumental·가사 칸 충돌 수정, 볼륨 밸런스 추가 ⑩ (v2.2) 제미나이 패키지에서 TTS 톤·타이밍, Suno 제외 스타일, 환경음 전환, 썸네일 디테일 병합
 
 ## 0. 기획 요약
 - 제목 후보: ① 30년 버스 기사가 매일 10초를 기다린 이유 ② 마지막 운행 날, 그 정류장에 그녀가 서 있었다 ③ 기사님, 저 한 번도 안 늦었어요
@@ -20,7 +20,7 @@
 | **DRIVER (현재)** | a Korean man in his late 60s, short salt-and-pepper hair, kind tired eyes with deep smile lines, light blue short-sleeve bus driver uniform shirt with a navy tie and a navy driver cap |
 | **DRIVER_PAST (회상)** | the same Korean bus driver about 20 years younger, in his late 40s, short black hair with a few gray strands, the same kind eyes, light blue short-sleeve bus driver uniform shirt with a navy tie and a navy driver cap |
 | **GIRL (8살)** | a Korean girl about 8 years old, black hair in two short pigtails, round cheeks, yellow raincoat, red backpack with a small yellow teddy bear keychain |
-| **STUDENT (17살)** | a Korean high school girl about 17 years old, black hair in a high ponytail, navy school blazer uniform, red backpack with a small worn yellow teddy bear keychain |
+| **STUDENT (17살)** | a Korean high school girl about 17 years old, black hair in a high ponytail, navy Korean school blazer uniform, red backpack with a small worn yellow teddy bear keychain |
 | **WOMAN (28살)** | a Korean woman in her late 20s, shoulder-length black hair in a low ponytail, cream blouse with a beige cardigan, beige tote bag with a small worn yellow teddy bear keychain |
 | **BUS** | a modern South Korean green city bus, low-floor Seoul-style |
 | **STOP** | a Korean neighborhood bus stop with a small glass shelter and a metal bench, signs blurred in the background |
@@ -65,7 +65,7 @@
 ## 3. 힉스필드 프롬프트
 
 **모든 컷 Negative:**
-`text, subtitles, Korean text, garbled letters, readable signs, watermark, logo, extra fingers, deformed hands, deformed face, blurry, duplicate person, western-style bus`
+`text, subtitles, Korean text, garbled letters, readable signs, watermark, logo, extra fingers, deformed hands, deformed face, blurry, duplicate person, western-style bus, American school bus`
 
 **Cut 1 (0:00–0:04)** ⭐ 레퍼런스 컷
 - Image: medium shot, a Korean man in his late 60s, short salt-and-pepper hair, kind tired eyes with deep smile lines, light blue short-sleeve bus driver uniform shirt with a navy tie, putting on a navy driver cap in front of a parked modern South Korean green city bus, low-floor Seoul-style, quiet Korean bus depot at dawn, soft blue morning haze with warm sodium lights, calm and nostalgic mood, cinematic, natural light, shot on 35mm, shallow depth of field, photorealistic, vertical 9:16
@@ -85,10 +85,10 @@
 
 **Cut 5 (0:16–0:20)** — 회상 ⭐ 컷 11 레퍼런스
 - Image: medium shot from inside the bus looking at the front door steps, a Korean girl about 8 years old, black hair in two short pigtails, yellow raincoat, red backpack with a small yellow teddy bear keychain, standing on the bus steps out of breath and bowing politely, rainy Korean street behind her, warm faded film look, early 2000s nostalgic color grade, soft grain, photorealistic, vertical 9:16
-- Video: static shot, the girl catches her breath and bows deeply, then looks up with a shy smile.
+- Video: static shot, the girl catches her breath and bows deeply, then looks up with a shy smile, the folding bus door begins to close.
 
 **Cut 6 (0:20–0:24)** — 회상
-- Image: medium close-up, a Korean high school girl about 17 years old, black hair in a high ponytail, navy school blazer uniform, red backpack with a small worn yellow teddy bear keychain on her lap, sitting by the window of a South Korean city bus looking outside, rain streaks on the glass, soft gray daylight, warm faded film look, early 2000s nostalgic color grade, soft grain, photorealistic, vertical 9:16
+- Image: medium close-up, a Korean high school girl about 17 years old, black hair in a high ponytail, navy Korean school blazer uniform, red backpack with a small worn yellow teddy bear keychain on her lap, sitting by the window of a South Korean city bus looking outside, rain streaks on the glass, soft gray daylight, warm faded film look, early 2000s nostalgic color grade, soft grain, photorealistic, vertical 9:16
 - Video: slow pan left along the rainy window to her reflective face, city lights blurring past outside.
 
 **Cut 7 (0:24–0:28)** — 회상
@@ -107,7 +107,7 @@
 - Image: close-up, a Korean man in his late 60s, short salt-and-pepper hair, kind tired eyes with deep smile lines, navy driver cap, looking at the side mirror of a South Korean city bus with widening eyes, warm golden sunlight on his face, cinematic, shot on 35mm, shallow depth of field, photorealistic, vertical 9:16
 - Video: slow push in as his eyes widen in recognition and soften into a quiet smile, he keeps the door open.
 
-**Cut 11 (0:40–0:45)** — 컷 5 레퍼런스로 같은 구도
+**Cut 11 (0:40–0:45)** — 컷 5 레퍼런스로 같은 구도 (인물과 시간대만 교체: 비 오는 아침 → 노을 지는 오후)
 - Image: medium shot from inside the bus looking at the front door steps, a Korean woman in her late 20s, shoulder-length black hair in a low ponytail, cream blouse with a beige cardigan, beige tote bag with a small worn yellow teddy bear keychain, holding a small bouquet, standing on the bus steps out of breath and bowing politely, golden afternoon Korean street behind her, cinematic, natural light, shot on 35mm, photorealistic, vertical 9:16
 - Video: static shot mirroring the childhood scene, she catches her breath and bows deeply, then looks up with a teary smile.
 
@@ -156,6 +156,24 @@
 그 10초가, 한 아이의 인생을 기다려주고 있었다.
 ```
 
+### 컷별 톤 & 호흡
+| 컷 | 화자 | 톤 & 타이밍 |
+|---|---|---|
+| 1 | 🎙 | 담담하게 시작 |
+| 2 | 🎙 | 차분하게 |
+| 3 | 🎙 | 회상 톤, 살짝 따뜻하게 |
+| 4 | 🎙 | "그는 늘," 뒤에 0.5초 쉬고 "10초"를 강조 |
+| 5 | 🎙 | 미소 짓는 느낌 |
+| 6 | 🎙 | 잔잔하게 이어 가며 말끝을 흐림 |
+| 7 | 🎙 | 톤을 낮추고 쓸쓸하게 |
+| 8 | 🎙 | 앞에 1초 정적, 다시 현재 톤으로 |
+| 9 | 🎙 | 기대감을 살짝 얹기 |
+| 10 | 🎙 | 따뜻하고 뭉클하게 |
+| 11 | 🎙 | 앞에 1초 정적(BGM만), 천천히 또박또박 |
+| 12 | 👩 | 숨이 살짝 찬 듯, 떨리는 미소 |
+| 13 | 👩 | "저," 뒤에 짧게 쉬고, 울음을 참는 듯 |
+| 14 | 🎙 | 울컥함을 누르듯 천천히, 여운을 남기며 |
+
 - 컷 10이 끝나면 **1초 정적**(BGM만)을 두고 컷 11 내레이션을 시작하세요.
 - 컷 13 대사 직후 BGM을 가장 크게 올리세요.
 
@@ -164,8 +182,8 @@
 ## 5. BGM (Suno) 프롬프트
 
 - **Title:** The Ten Seconds
-- **Style:** `emotional cinematic instrumental, solo felt piano, slow tempo 68 bpm, nostalgic and warm, Korean drama OST mood, soft strings enter at the middle and swell to a gentle climax near the end, no drums, no vocals`
-- **Exclude Styles:** `vocals, singing, choir, humming, drums`
+- **Style:** `emotional Korean drama OST, warm solo felt piano opening, gentle strings and soft cello entering midway, swelling to a gentle climax near the end, nostalgic and heartwarming, slow 70 bpm, cinematic, intimate, minimal arrangement, no drums, instrumental`
+- **Exclude Styles:** `vocals, singing, choir, humming, drums, percussion, electronic, synth, fast tempo, epic trailer, loud, rock`
 
 > ⚠️ Suno에서 **Instrumental을 ON으로 켜면 가사 칸이 사라집니다.** 아래 두 방법 중 하나를 고르세요.
 
@@ -204,9 +222,9 @@
 | 컷 | 효과음 |
 |---|---|
 | 1 | 새벽 새소리, 멀리서 시동 거는 소리 |
-| 3~5 | 빗소리, 뛰는 발소리, 버스 문 열리는 "치익" |
-| 6 | 창밖 빗소리, 버스 엔진의 낮은 소리 |
-| 7 | 바람 소리, 낙엽 굴러가는 소리 |
+| 3~6 | 빗소리를 작게 계속 깔기, 뛰는 발소리(컷 3), 버스 문 "치익"(컷 4·5) |
+| 6 | 버스 엔진의 낮은 소리 추가 |
+| 7 | **빗소리를 딱 끊고** 바람 소리와 낙엽 소리만 (아이가 사라진 공백을 소리로 표현) |
 | 9 | 뛰는 발소리, 키링이 짤랑이는 소리 |
 | 11 | 버스 문 "치익" (컷 5와 같은 소리를 써서 수미상관) |
 | 14 | 버스 엔진 소리가 멀어지며 페이드아웃 |
@@ -226,7 +244,7 @@
 - 제목: **30년 버스 기사가 매일 10초를 기다린 이유**
 - 설명: 매일 늦던 아이를 위해 기다려준 10초. 마지막 운행 날, 그 10초가 돌아왔다.
 - 해시태그: #쇼츠 #감동 #감동영상 #버스기사 #마지막운행 #뭉클 #눈물주의 #AI영화
-- 썸네일: close-up, an elderly Korean bus driver in a navy cap smiling with teary eyes, holding a small bouquet of white and yellow flowers, warm golden sunlight through the bus window, emotional, cinematic, photorealistic, vertical 9:16
+- 썸네일: close-up, an elderly Korean bus driver in his late 60s wearing a light blue uniform shirt and navy driver cap, smiling with teary eyes while holding a small bouquet of white and yellow flowers inside a South Korean city bus, warm golden sunset light through the window, emotional, cinematic, shot on 85mm, photorealistic, vertical 9:16
 
 ## 8. 체크리스트
 - [ ] 버스와 정류장이 한국식으로 나왔는가 (서양식 스쿨버스나 이층버스가 아닌지)
