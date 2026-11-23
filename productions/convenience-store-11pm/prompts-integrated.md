@@ -9,11 +9,35 @@
 
 ---
 
-## 공통 네거티브 (모든 이미지에 사용)
+## 공통 네거티브 — 이미지용 (모든 이미지에 매번 사용)
+
+STEP 1 레퍼런스 시트와 씬 1~5의 **모든 이미지**에 똑같이 넣는다.
 
 ```
 different person, face drift, changed face shape, enlarged eyes, slimmed face, V-line chin, sharpened chin, skin whitening, pale porcelain skin, airbrushed skin, plastic skin, beauty filter, heavy makeup, younger-looking face, older-looking face, mirrored mole position, blended faces, face swap, extra fingers, missing fingers, fused fingers, distorted hands, wide-angle face distortion, different outfit, missing name tag, watch on wrong wrist, anime, cartoon, illustration, 3D render, Chinese or Japanese styling, Hanzi, Kanji, Hiragana, Katakana, non-Hangul text, garbled Hangul, real brand logos, subtitles, captions, watermark, low resolution, blurry face
 ```
+
+**넣는 위치**
+
+| 툴 화면 | 넣는 방법 |
+| --- | --- |
+| Negative prompt 칸이 따로 있음 | 그 칸에 위 네거티브를 통째로 붙여넣기 |
+| 칸이 없음 (프롬프트 칸 하나뿐) | 씬 이미지 프롬프트 맨 끝에 `Avoid:`를 쓰고 그 뒤에 붙이기 |
+
+칸이 없을 때 예시:
+```
+...9:16 vertical, 4K. Avoid: different person, face drift, changed face shape, enlarged eyes, ...(위 네거티브 전체)
+```
+
+## 공통 네거티브 — 영상용 (선택)
+
+영상 프롬프트마다 "no morphing, no face change, no on-screen text"가 이미 들어 있어서 **필수는 아니다.** 영상 툴에 네거티브 칸이 있을 때만 아래 짧은 버전을 넣는다.
+
+```
+face morphing, face change, different person, extra fingers, distorted hands, on-screen text, subtitles, watermark
+```
+
+> 스타일 문구(Real camera photo, 렌즈, 9:16 등)는 각 씬 프롬프트 안에 이미 들어 있으므로 따로 붙이지 않는다.
 
 ---
 
